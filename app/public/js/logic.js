@@ -23,11 +23,11 @@ $("#matchMe").on("click", function(event) {
   console.log(newFriend);
   
   var pageURL = window.location.origin;
-  
+
 
 $.post({
     url: '/api/friends', 
     data: JSON.stringify(newFriend),
     contentType: 'application/json; charset=utf-8'
 })
-.then(function(response) {console.log(response)});
+.then(console.log(response));
