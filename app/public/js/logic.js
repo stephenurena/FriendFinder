@@ -29,5 +29,4 @@ $.post({
     url: '/api/friends', 
     data: JSON.stringify(newFriend),
     contentType: 'application/json; charset=utf-8'
-})
-.then(console.log(response));
+}).then(console.log(response));
