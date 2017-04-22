@@ -1,7 +1,8 @@
 //this is logic
 $("#matchMe").on("click", function(event) {
   event.preventDefault();
-  if(($("#newName").val() === "") || ($("#newPhoto").val() === "")){
+  //validates form to ensure no "" inputs
+  if(($(".formVal").val() === "") || ($("#newPhoto").val() === "")){
     alert("Please fill in all required fields")
   } 
   else {
@@ -11,6 +12,7 @@ $("#matchMe").on("click", function(event) {
   var newName = $("#newName").val().trim();
   var newPhoto = $("#newPhoto").val().trim();
   var newScores= [
+    //stores the 10 question values from element select on the html
     $("#questionOne").val(),
     $("#questionTwo").val(),
     $("#questionThree").val(),
@@ -39,9 +41,11 @@ $("#matchMe").on("click", function(event) {
   $.post(URL + "/api/friends", newFriend,
     function(data) {
 
+      //sets matching friend's name and photo to for the modal
       $("#matchName").text(data.name);
       $('#matchImg').attr("src", data.photo);
 
+      //on button submit, will toggle the modal to display
       $("#resultsModal").modal('toggle');
 
       //resets values after click
