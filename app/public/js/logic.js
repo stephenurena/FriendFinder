@@ -6,7 +6,7 @@ $("#matchMe").on("click", function(event) {
   var newFriend = {
     name: $("#newName").val(),
     photo: $("#newPhoto").val(),
-    scores: parseINT([
+    scores: parseInt([
     $("#questionOne").val(),
     $("#questionTwo").val(),
     $("#questionThree").val(),
