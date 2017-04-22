@@ -4,28 +4,36 @@ $("#matchMe").on("click", function(event) {
 
   // Here we grab the form elements
   var newFriend = {
-    name: $("#newName").val(),
-    photo: $("#newPhoto").val(),
+    name: $("#newName").val().trim(),
+    photo: $("#newPhoto").val().trim(),
     scores: [
-    parseInt($("#questionOne").val()),
-    parseInt($("#questionTwo").val()),
-    parseInt($("#questionThree").val()),
-    parseInt($("#questionFour").val()),
-    parseInt($("#questionFive").val()),
-    parseInt($("#questionSix").val()),
-    parseInt($("#questionSeven").val()),
-    parseInt($("#questionEight").val()),
-    parseInt($("#questionNine").val()),
-    parseInt($("#questionTen").val())
+    $("#questionOne").val(),
+    $("#questionTwo").val(),
+    $("#questionThree").val(),
+    $("#questionFour").val(),
+    $("#questionFive").val(),
+    $("#questionSix").val(),
+    $("#questionSeven").val(),
+    $("#questionEight").val(),
+    $("#questionNine").val(),
+    $("#questionTen").val()
     ]
   }
 
   console.log(newFriend);
 
-  $.post("/api/friends", newFriend,
-    function(data) {
+
+  var URL = window.location.origin;
+
+  $.post(
+    {
+      URL: "/api/friends", 
+      data: JSON.stringify(newFriend),
+      contentType: 'application/json; charset=utf-8'
+    }).then(function(data) {
        console.log(data.name);
-       console.log(data.photo);
+       console.log(data.photo)
+
   
     // $(#).text(data.name);
     // $(#).attr("src", data.photo);
