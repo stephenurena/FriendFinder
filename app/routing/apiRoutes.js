@@ -4,7 +4,7 @@
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
 
-var friendsData = require("../data/friends.js");
+var friendsData = require("../data/friends");
 
 
 // ===============================================================================
@@ -42,9 +42,7 @@ module.exports = function(app) {
 
   app.post("/api/clear", function() {
     // Empty out the arrays of data
-    tableData = [];
-    waitListData = [];
-
-    console.log(tableData);
+    friendsData = [];
+    console.log(friendsData);
   });
 };
