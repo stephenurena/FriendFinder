@@ -6,7 +6,7 @@ $("#matchMe").on("click", function(event) {
   var newFriend = {
     name: $("#newName").val(),
     photo: $("#newPhoto").val(),
-    scores: [
+    scores: parseINT([
     $("#questionOne").val(),
     $("#questionTwo").val(),
     $("#questionThree").val(),
@@ -17,14 +17,12 @@ $("#matchMe").on("click", function(event) {
     $("#questionEight").val(),
     $("#questionNine").val(),
     $("#questionTen").val()
-    ]
+    ])
   }
 
   console.log(newFriend);
-  
-  var pageURL = window.location.origin;
 
-  $.post(pageURL + "/api/friends", newFriend,
+  $.post("/api/friends", newFriend,
     function(data) {
        console.log(data.name);
        console.log(data.photo);
