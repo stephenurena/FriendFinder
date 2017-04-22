@@ -23,17 +23,7 @@ $("#matchMe").on("click", function(event) {
   console.log(newFriend);
   
   var pageURL = window.location.origin;
-
-  $.post(pageURL + "/api/friends", newFriend,
-    function(data) {
-       console.log(data.name);
-       console.log(data.photo);
   
-    // $(#).text(data.name);
-    // $(#).attr("src", data.photo);
-
-    });
-});
 
 $.post({
     url: '/api/friends', 
