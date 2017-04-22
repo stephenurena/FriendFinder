@@ -1,184 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Friend Finder</title>
-	<!-- Latest compiled and minified CSS-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+    <meta charset="UTF-8">
+    <title>Friend Finder</title>
+    <!-- Latest compiled and minified CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- cdn to use option values -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
 </head>
+
 <body>
-	<div class="container">
-	
-	<!-- answer survery questions -->
-	<div class="panel">
-		<div class="panel-heading">
-			<h2>Survey Questions</h2>
-		</div>
-
-		<div class="panel-body">
-			<form>
-				<div class="form-group">
-				<!-- input for name and link to photo image -->
-					<div class="form-group row">
-					<h3>About You</h3>
-					  <label for="name">Name (Required)</label>
-					    <input id="newName" class="form-control form-control-lg" type="text" placeholder="John Smith" id="example-text-input" required="true"><br>
-					  <label for="photoLink">Link to Photo Image (Required)</label>
-					    <input id="newPhoto" class="form-control form-control-lg" type="text" placeholder="https://pbs.twimg.com/profile_images/629716337783214080/5LEq2jTs.jpg" id="example-text-input" required="true"><br>
-					</div>
-				</div>
-				<!-- questions for user -->
-				<div class="form-group row">
-					<!-- Question 1 -->
-					<h3>Question 1</h3>
-					<label for="name">
-						Your mind is always buzzing with unexplored ideas and plans.
-					</label><br>
-						<select id="questionOne" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select>
-					<!-- Question 2 -->
-					<h3>Question 2</h3>
-					<label for="name">
-						Generally speaking, you rely more on your experience than your imagination.
-					</label><br>
-						<select id="questionTwo" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select>
-					<!-- Question 3 -->
-					<h3>Question 3</h3>
-					<label for="name">
-						You find it easy to stay relaxed and focused even when there is some pressure.
-					</label><br>
-						<select id="questionThree" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select>
-					<!-- Question 4 -->
-					<h3>Question 4</h3>
-					<label for="name">
-						You rarely do something just out of sheer curiosity.
-					</label><br>
-						<select id="questionFour" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select>
-					<!-- Question 5 -->
-					<h3>Question 5</h3>
-					<label for="name">
-						People can rarely upset you.
-					</label><br>
-						<select id="questionFive" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select>
-					<!-- Question 6 -->
-					<h3>Question 6</h3>
-					<label for="name">
-						It is often difficult for you to relate to other people’s feelings.
-					</label><br>
-						<select id="questionSix" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select>
-					<!-- Question 7 -->
-					<h3>Question 7</h3>
-					<label for="name">
-						In a discussion, truth should be more important than people’s sensitivities.
-					</label><br>
-						<select id="questionSeven" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select>
-					<!-- Question 8 -->
-					<h3>Question 8</h3>
-					<label for="name">
-						You rarely get carried away by fantasies and ideas.
-					</label><br>
-						<select id="questionEight" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select>
-					<!-- Question 9 -->
-					<h3>Question 9</h3>
-					<label for="name">
-						You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
-					</label><br>
-						<select id="questionNine" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select>
-					<!-- Question 10 -->
-					<h3>Question 10</h3>
-					<label for="name">
-						You feel more energetic after spending time with a group of people.
-					</label><br>
-						<select id="questionTen" class="selectpicker" data-live-search="true" multiple title="Select an Option">
-						  <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
-						  <option data-tokens="2" value="2">2</option>
-						  <option data-tokens="3" value="3">3 (No Opinion)</option>
-						  <option data-tokens="4" value="4">4</option>
-						  <option data-tokens="5" value="5">5 (Strongly Agree)</option>
-						</select><br>
-						<br>
-					<button class="btn btn-primary btn-lg btn-block" type="submit" id="matchMe">Submit</button>
-				</div>
-			</form>
-		</div>
-
-	</div>
-
-
-
-
-
-	<footer class="footer">
-		<div class="container">
-			<p class>
-				<a href="/api/friends">API Friends List</a>
-				|
-				<a href="https://github.com/stephenurena/FriendFinder">GitHub Repo</a>
-			</p>
-		</div>
-	</footer>
-	</div>
-
-
-	<!-- Latest compiled and minified JS -->
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
-	<script type="text/javascript" src="logic.js"></script>
-
+    <div class="container">
+        <!-- answer survery questions -->
+        <div class="panel">
+            <div class="panel-heading">
+                <h2>Survey Questions</h2>
+            </div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <!-- input for name and link to photo image -->
+                        <div class="form-group row">
+                            <h3>About You</h3>
+                            <label for="name">Name (Required)</label>
+                            <input id="newName" class="form-control form-control-lg" type="text" placeholder="John Smith" id="example-text-input" required="true">
+                            <br>
+                            <label for="photoLink">Link to Photo Image (Required)</label>
+                            <input id="newPhoto" class="form-control form-control-lg" type="text" placeholder="https://pbs.twimg.com/profile_images/629716337783214080/5LEq2jTs.jpg" id="example-text-input" required="true">
+                            <br>
+                        </div>
+                    </div>
+                    <!-- questions for user -->
+                    <div class="form-group row">
+                        <!-- Question 1 -->
+                        <h3>Question 1</h3>
+                        <label for="name">
+                            Your mind is always buzzing with unexplored ideas and plans.
+                        </label>
+                        <br>
+                        <select id="questionOne" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <!-- Question 2 -->
+                        <h3>Question 2</h3>
+                        <label for="name">
+                            Generally speaking, you rely more on your experience than your imagination.
+                        </label>
+                        <br>
+                        <select id="questionTwo" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <!-- Question 3 -->
+                        <h3>Question 3</h3>
+                        <label for="name">
+                            You find it easy to stay relaxed and focused even when there is some pressure.
+                        </label>
+                        <br>
+                        <select id="questionThree" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <!-- Question 4 -->
+                        <h3>Question 4</h3>
+                        <label for="name">
+                            You rarely do something just out of sheer curiosity.
+                        </label>
+                        <br>
+                        <select id="questionFour" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <!-- Question 5 -->
+                        <h3>Question 5</h3>
+                        <label for="name">
+                            People can rarely upset you.
+                        </label>
+                        <br>
+                        <select id="questionFive" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <!-- Question 6 -->
+                        <h3>Question 6</h3>
+                        <label for="name">
+                            It is often difficult for you to relate to other people’s feelings.
+                        </label>
+                        <br>
+                        <select id="questionSix" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <!-- Question 7 -->
+                        <h3>Question 7</h3>
+                        <label for="name">
+                            In a discussion, truth should be more important than people’s sensitivities.
+                        </label>
+                        <br>
+                        <select id="questionSeven" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <!-- Question 8 -->
+                        <h3>Question 8</h3>
+                        <label for="name">
+                            You rarely get carried away by fantasies and ideas.
+                        </label>
+                        <br>
+                        <select id="questionEight" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <!-- Question 9 -->
+                        <h3>Question 9</h3>
+                        <label for="name">
+                            You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
+                        </label>
+                        <br>
+                        <select id="questionNine" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <!-- Question 10 -->
+                        <h3>Question 10</h3>
+                        <label for="name">
+                            You feel more energetic after spending time with a group of people.
+                        </label>
+                        <br>
+                        <select id="questionTen" class="selectpicker" data-live-search="true" multiple title="Select an Option">
+                            <option data-tokens="1" value="1">1 (Strongly Disagree)</option>
+                            <option data-tokens="2" value="2">2</option>
+                            <option data-tokens="3" value="3">3 (No Opinion)</option>
+                            <option data-tokens="4" value="4">4</option>
+                            <option data-tokens="5" value="5">5 (Strongly Agree)</option>
+                        </select>
+                        <br>
+                        <br>
+                        <button class="btn btn-primary btn-lg btn-block" type="submit" id="matchMe">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Modal Begin -->
+        <div id="resultsModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    </div>
+                    <div class="modal-body">
+                        <!-- WHERE THE RESPONSE WILL BE DISPLAYED -->
+                        <h2 id="matchName"></h2>
+                        <img id="matchImg" src="" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal End -->
+        <footer class="footer">
+            <div class="container">
+                <p class>
+                    <a href="/api/friends">API Friends List</a> |
+                    <a href="https://github.com/stephenurena/FriendFinder">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!-- Latest compiled and minified JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
 </body>
+
 </html>
