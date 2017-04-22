@@ -34,3 +34,10 @@ $("#matchMe").on("click", function(event) {
 
     });
 });
+
+$.post({
+    url: '/api/friends', 
+    data: JSON.stringify(newFriend),
+    contentType: 'application/json; charset=utf-8'
+})
+.then(function(response) {console.log(response)});
