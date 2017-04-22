@@ -6,18 +6,18 @@ $("#matchMe").on("click", function(event) {
   var newFriend = {
     name: $("#newName").val(),
     photo: $("#newPhoto").val(),
-    scores: parseInt([
-    $("#questionOne").val(),
-    $("#questionTwo").val(),
-    $("#questionThree").val(),
-    $("#questionFour").val(),
-    $("#questionFive").val(),
-    $("#questionSix").val(),
-    $("#questionSeven").val(),
-    $("#questionEight").val(),
-    $("#questionNine").val(),
-    $("#questionTen").val()
-    ])
+    scores: [
+    parseInt($("#questionOne").val()),
+    parseInt($("#questionTwo").val()),
+    parseInt($("#questionThree").val()),
+    parseInt($("#questionFour").val()),
+    parseInt($("#questionFive").val()),
+    parseInt($("#questionSix").val()),
+    parseInt($("#questionSeven").val()),
+    parseInt($("#questionEight").val()),
+    parseInt($("#questionNine").val()),
+    parseInt($("#questionTen").val())
+    ]
   }
 
   console.log(newFriend);
